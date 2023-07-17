@@ -24,6 +24,10 @@ fastqc:
 star:
     cpu : 6
     MaxMem : 45
+ 
+star_keepBam:
+    cpu : 6
+    MaxMem : 45
 
 star_dupRadar:
     cpu : 6

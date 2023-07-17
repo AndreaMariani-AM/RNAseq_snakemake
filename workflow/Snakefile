@@ -56,11 +56,10 @@ else:
 
 rule all: 
     input:
-        expand("results/02salmon/{sample}/quant.sf", sample = SAMPLES),
-        #"results/01qc/preseq/curve/c_curve.pdf",
-        "results/01qc/multiqc/multiqc_report.html",
-        "results/04deseq2/all.rds", 
         expand("results/04deseq2/pca_top{ntop}.pdf", ntop = config["pca"]["ntop"]),
+        "results/01qc/multiqc/multiqc_report.html",
+        expand("results/02salmon/{sample}/quant.sf", sample = SAMPLES),
+        "results/04deseq2/all.rds",
         "results/04deseq2/tpm.tsv",
         enrichments,
         expand("results/04deseq2/{contrast}/log2fc{log2fc}_pval{pvalue}_tpm{tpm}/{contrast}_volcano_log2fc{log2fc}_pval{pvalue}_tpm{tpm}.pdf", 
@@ -92,7 +91,7 @@ rule all_star_fc_bw:
 
 rule all_bam:
     input:
-        expand("results/02alignments/{sample}/{sample}.bam", sample = SAMPLES)
+        expand("results/06keepBam/{sample}/{sample}.bam", sample = SAMPLES)
 
 
 #-----------------------------------------------------------------------------------------------------------------------

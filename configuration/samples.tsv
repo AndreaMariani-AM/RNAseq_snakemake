@@ -1,35 +1,25 @@
-sample	condition	treatment	genotype
-WT-00h-rep1	WT_00h	WT	WT
-WT-48h-rep1	WT_48h	WT	WT
-WT-96h-rep1	WT_96h	WT	WT
-Pcgf1KO-00h-rep1	Pcgf1KO_00h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-48h-rep1	Pcgf1KO_48h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-96h-rep1	Pcgf1KO_96h	PCFG1-KO	PCFG1-KO
-Prc2KO-00h-rep1	Prc2KO_00h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-48h-rep1	Prc2KO_48h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-96h-rep1	Prc2KO_96h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-
-WT-00h-rep2	WT_00h	WT	WT
-WT-48h-rep2	WT_48h	WT	WT
-WT-96h-rep2	WT_96h	WT	WT
-Pcgf1KO-00h-rep2	Pcgf1KO_00h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-48h-rep2	Pcgf1KO_48h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-96h-rep2	Pcgf1KO_96h	PCFG1-KO	PCFG1-KO
-Prc2KO-00h-rep2	Prc2KO_00h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-48h-rep2	Prc2KO_48h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-
-WT-00h-rep3	WT_00h	WT	WT
-WT-48h-rep3	WT_48h	WT	WT
-Pcgf1KO-00h-rep3	Pcgf1KO_00h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-48h-rep3	Pcgf1KO_48h	PCFG1-KO	PCFG1-KO
-Pcgf1KO-96h-rep3	Pcgf1KO_96h	PCFG1-KO	PCFG1-KO
-Prc2KO-00h-rep3	Prc2KO_00h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-48h-rep3	Prc2KO_48h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-96h-rep3	Prc2KO_96h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-
-
-Prc2KO-96h-rep2	Prc2KO_96h	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-Prc2KO-96h-rep2-out	Prc2KO_96h_out	EZH1_EZH2-dKO	EZH1_EZH2-dKO
-
-WT-96h-rep3	WT_96h	WT	WT
-WT-96h-rep3-out	WT_96h_out	WT	WT
+sample	condition
+E14-WT-rep1	CTR_WT
+E14-WT-rep2	CTR_WT
+E14-WT-rep3	CTR_WT
+E14-SI53S-rep1	SI53S
+E14-SI53S-rep2	SI53S
+E14-SI53S-rep3	SI53S
+E14-SI53S-rescue3-rep1	SI53S_rescue3
+E14-SI53S-rescue3-rep2	SI53S_rescue3
+E14-SI53S-rescue3-rep3	SI53S_rescue3
+E14-SI53S-rescue8-rep1	SI53S_rescue8
+E14-SI53S-rescue8-rep2	SI53S_rescue8
+E14-SI53S-rescue8-rep3	SI53S_rescue8
+Parental-Klose-rep1	Parental_K
+Parental-Klose-rep2	Parental_K
+Parental-Klose-rep3	Parental_K
+I53AD56K-Klose-clone1-rep1	I53AD56K_clone1
+I53AD56K-Klose-clone1-rep2	I53AD56K_clone1
+I53AD56K-Klose-clone1-rep3	I53AD56K_clone1
+I53AD56K-Klose-clone10-rep1	I53AD56K_clone10
+I53AD56K-Klose-clone10-rep2	I53AD56K_clone10
+I53AD56K-Klose-clone10-rep3	I53AD56K_clone10
+I53AD56K-Klose-clone25-rep1	I53AD56K_clone25
+I53AD56K-Klose-clone25-rep2	I53AD56K_clone25
+I53AD56K-Klose-clone25-rep3	I53AD56K_clone25

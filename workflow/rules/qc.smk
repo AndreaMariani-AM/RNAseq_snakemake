@@ -53,18 +53,18 @@ rule rseqc_gtf2bed:
 
 rule rseqc_stat:
     input:
-        expand("results/02alignments/{sample}/{sample}.bam", sample = SAMPLES)
+        bam = "results/02alignments/{sample}/{sample}.bam",
     output:
         "results/01qc/rseqc/{sample}.stats.txt"
     priority: 1
     log:
         "results/00log/rseqc/rseqc_stat/{sample}.log"
     shell:
-        "bam_stat.py -i {input} > {output} 2> {log}"
+        "bam_stat.py -i {input.bam} > {output} 2> {log}"
 
 rule rseqc_innerdis:
     input:
-        bam =  expand("results/02alignments/{sample}/{sample}.bam", sample = SAMPLES),
+        bam =  "results/02alignments/{sample}/{sample}.bam",
         bed = "results/01qc/rseqc/annotation.bed"
     output:
         "results/01qc/rseqc/{sample}.inner_distance_freq.inner_distance_freq.txt"
@@ -79,7 +79,7 @@ rule rseqc_innerdis:
 
 rule rseqc_readdis:
     input:
-        bam =  expand("results/02alignments/{sample}/{sample}.bam", sample = SAMPLES),
+        bam =  "results/02alignments/{sample}/{sample}.bam",
         bed = "results/01qc/rseqc/annotation.bed"
     output:
         "results/01qc/rseqc/{sample}.read_distribution.txt"
@@ -91,8 +91,8 @@ rule rseqc_readdis:
 
 rule rseqc_geneCoverage:
     input:
-        bam   = expand("results/02alignments/{sample}/{sample}.bam", sample = SAMPLES),
-        index = expand("results/02alignments/{sample}/{sample}.bam.bai", sample = SAMPLES),
+        bam   = "results/02alignments/{sample}/{sample}.bam",
+        index = "results/02alignments/{sample}/{sample}.bam.bai",
         bed   = "results/01qc/rseqc/annotation.bed"
     output:
         "results/01qc/rseqc/{sample}.geneBodyCoverage.geneBodyCoverage.txt"
@@ -182,8 +182,7 @@ rule multiQC_inputs:
         expand("results/01qc/rseqc/{sample}.read_distribution.txt", sample = SAMPLES),
         expand("results/00log/alignments/rm_dup/{sample}.log", sample = SAMPLES),
         expand("results/01qc/rseqc/{sample}.geneBodyCoverage.geneBodyCoverage.txt", sample = SAMPLES),
-        expand("results/01qc/dupradar/{sample}.pdf", sample = SAMPLES),
-        "results/01qc/preseq/curve/c_curve.pdf"
+        expand("results/01qc/dupradar/{sample}.pdf", sample = SAMPLES)
     output: 
         file = "results/01qc/multiqc/multiqc_inputs.txt"
     message:
