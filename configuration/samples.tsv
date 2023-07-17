@@ -1,25 +1,9 @@
-sample	condition
-E14-WT-rep1	CTR_WT
-E14-WT-rep2	CTR_WT
-E14-WT-rep3	CTR_WT
-E14-SI53S-rep1	SI53S
-E14-SI53S-rep2	SI53S
-E14-SI53S-rep3	SI53S
-E14-SI53S-rescue3-rep1	SI53S_rescue3
-E14-SI53S-rescue3-rep2	SI53S_rescue3
-E14-SI53S-rescue3-rep3	SI53S_rescue3
-E14-SI53S-rescue8-rep1	SI53S_rescue8
-E14-SI53S-rescue8-rep2	SI53S_rescue8
-E14-SI53S-rescue8-rep3	SI53S_rescue8
-Parental-Klose-rep1	Parental_K
-Parental-Klose-rep2	Parental_K
-Parental-Klose-rep3	Parental_K
-I53AD56K-Klose-clone1-rep1	I53AD56K_clone1
-I53AD56K-Klose-clone1-rep2	I53AD56K_clone1
-I53AD56K-Klose-clone1-rep3	I53AD56K_clone1
-I53AD56K-Klose-clone10-rep1	I53AD56K_clone10
-I53AD56K-Klose-clone10-rep2	I53AD56K_clone10
-I53AD56K-Klose-clone10-rep3	I53AD56K_clone10
-I53AD56K-Klose-clone25-rep1	I53AD56K_clone25
-I53AD56K-Klose-clone25-rep2	I53AD56K_clone25
-I53AD56K-Klose-clone25-rep3	I53AD56K_clone25
+sample	condition	treatment	genotype
+CTR-NT-rep1	CTR_NT	NT	CTR
+CTR-NT-rep2	CTR_NT	NT	CTR
+CTR-T-rep1	CTR_T	T	CTR
+CTR-T-rep2	CTR_T	T	CTR
+P6KO-NT-rep1	P6KO_NT	NT	P6KO
+P6KO-NT-rep3	P6KO_NT	NT	P6KO
+P6KO-T-rep1	P6KO_T	T	P6KO
+P6KO-T-rep2	P6KO_T	T	P6KO
