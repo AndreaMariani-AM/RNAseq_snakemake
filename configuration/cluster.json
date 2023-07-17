@@ -26,6 +26,11 @@
 		"cpu" : 8,
 		"MaxMem" : 40
 	},
+	"star_keepBam":
+	{
+		"cpu" : 8,
+		"MaxMem" : 40
+	},
 	"featureCounts":
 	{
 		"cpu" : 5

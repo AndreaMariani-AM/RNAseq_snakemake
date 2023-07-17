@@ -86,6 +86,10 @@ rule all_downsampled_test:
             log2fc = config["diffexp"]["log2fc"],
             fpkm   = config["diffexp"]["fpkm"])
 
+rule all_bam:
+    input:
+        expand("results/06keepBam/{sample}/{sample}.bam", sample = SAMPLES)
+
 
 ##### load rules #####
 include: "rules/common.smk"

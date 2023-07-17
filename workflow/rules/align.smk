@@ -85,3 +85,38 @@ rule bam2bigwig:
     bamCoverage --normalizeUsing CPM -p {threads} -bs 1 -b {params.tmp} -o {output} 2> {log}
         rm {params.tmp} {params.tmp}.bai
         """
+
+rule star_keepBam:
+    input:
+        get_fq
+    output:
+        bam   = "results/06keepBam/{sample}/{sample}.bam",
+        index = "results/06keepBam/{sample}/{sample}.bam.bai",
+        log   = "results/06keepBam/{sample}/Log.final.out"
+    log:
+        align   = "results/00log/keepBam/{sample}.log",
+        rm_dups = "results/00log/keepBam/rm_dup/{sample}.log",
+    params:
+        out_dir      = directory("results/06keepBam/{sample}/"),
+        star_params  = config["params"]["star_noSalmon"],
+        # path to STAR reference genome index
+        index        = config["ref"]["index"],
+        samtools_mem = config["params"]["samtools_mem"]
+    threads:
+        CLUSTER["star_keepBam"]["cpu"]
+    shadow: 
+        "minimal"
+    shell: 
+        """
+        STAR --genomeDir {params.index} \
+        --runThreadN {threads} \
+        --readFilesIn {input} \
+        --outFileNamePrefix {params.out_dir} \
+        --outSAMtype SAM \
+        --outStd SAM \
+        {params.star_params} 2> {log.align} \
+        | samblaster --removeDups 2> {log.rm_dups} \
+        | samtools view -Sb -F 4 - \
+        | samtools sort -m {params.samtools_mem}G -@ {threads} -T {output.bam}.tmp -o {output.bam} - 2>> {log.align}
+        samtools index {output.bam} 2>> {log.align}
+        """
