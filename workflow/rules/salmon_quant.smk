@@ -74,7 +74,7 @@ rule salmon_quant:
         -i {input.index} \
         -p {threads} \
         -g {params.gtf} \
-        -l {params.library}\
+        -l {params.library} \
         {params.reads} \
         -o {params.out_fold} \
         {params.options} \
