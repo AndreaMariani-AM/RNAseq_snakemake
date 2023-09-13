@@ -87,8 +87,8 @@ if (set_universe == TRUE) {
 #------------------------------------------------------------------------------------------
 UP.go      <- goEnrichment(UP, ont = "BP", db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
 DWN.go     <- goEnrichment(DWN, ont = "BP", db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
-UP.kegg    <- KEGGenrichment(UP, org = kegg.genome, db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
-DWN.kegg   <- KEGGenrichment(DWN, org = kegg.genome, db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
+#UP.kegg    <- KEGGenrichment(UP, org = kegg.genome, db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
+#DWN.kegg   <- KEGGenrichment(DWN, org = kegg.genome, db = db, pvalue = pvalue, qvalue = qvalue, universe = universe)
 UP.pa      <- PAenrichment(UP, org = pa.genome, pvalue = pvalue, qvalue = qvalue, universe = universe)
 DWN.pa     <- PAenrichment(DWN, org = pa.genome, pvalue = pvalue, qvalue = qvalue, universe = universe)
 UP.msig_h  <- msig_db_enrichment(UP, db = db, pvalue = pvalue, qvalue = qvalue, universe = universe, term2gene = m_df.h)
@@ -108,8 +108,8 @@ head(universe)
 head(UP.go@result)
 list_of_datasets <- list( "GO Upregulated"                 = UP.go@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(), 
                           "GO Downregulated"               = DWN.go@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
-                          "KEGG Upregulated"               = UP.kegg@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
-                          "KEGG Downregulated"             = DWN.kegg@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
+                          #"KEGG Upregulated"               = UP.kegg@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
+                          #"KEGG Downregulated"             = DWN.kegg@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
                           "Reactome Upregulated"           = UP.pa@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
                           "Reactome Downregulaed"          = DWN.pa@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
                           "MSigDB_Hallmarks Upregulated"   = UP.msig_h@result %>% dplyr::filter(p.adjust < !!pvalue) %>% add_row(),
