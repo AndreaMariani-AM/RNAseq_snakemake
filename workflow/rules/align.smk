@@ -98,7 +98,7 @@ rule star_keepBam:
         rm_dups = "results/00log/keepBam/rm_dup/{sample}.log",
     params:
         out_dir      = directory("results/06keepBam/{sample}/"),
-        star_params  = config["params"]["star_noSalmon"],
+        star_params  = config["params"]["star"],
         # path to STAR reference genome index
         index        = config["ref"]["index"],
         samtools_mem = config["params"]["samtools_mem"]
