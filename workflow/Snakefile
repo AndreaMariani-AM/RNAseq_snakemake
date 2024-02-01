@@ -105,7 +105,7 @@ localrules: all, all_downsampled, cp_fastq_pe, cp_fastq_se
 ##### handle possible errors, clean temp folders #####
 onsuccess:
     shell("""
-    rm -r results/fastq/
+    rm -rf results/fastq/
     qselect -u `whoami` -s E | xargs qdel -Wforce # Remove potential jobs in E state
     """)
 
