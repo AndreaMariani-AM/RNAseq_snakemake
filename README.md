@@ -2,6 +2,8 @@
 
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.4.3-brightgreen.svg)](https://snakemake.bitbucket.io)
 
+The original implementation can be found here: https://github.com/dfernandezperez/RNAseq-Snakemake
+
 This branch uses Alignment + count method (STAR + featureCounts) to quantify *transcript abundance*, if you want the newer quasi-mapping method with Salmon, change to salmon branch
 ```
 git clone git@github.com:AndreaMariani-AM/RNAseq_snakemake.git
